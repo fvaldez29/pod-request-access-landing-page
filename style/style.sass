@@ -1,0 +1,199 @@
+$neon-color: #54e6af
+$input-color: #2c344b
+$back-color: #121725
+$white: #ffff
+$gray: #5a668a
+$light-gray: #c2cbe5
+
+$chivo: 'Chivo', sans-serif
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: $chivo
+
+
+.main
+    position: relative
+    display: flex
+    justify-content: end
+    align-items: center
+    width: 100%
+    height: 100vh
+    background-color: $back-color
+
+    .pattern
+        position: absolute
+        right: 0
+        bottom: 100px
+
+.box__container
+    position: relative
+    display: flex
+    align-items: end
+    width: 1275px
+    height: 640px
+    background-image: url(../assets/desktop/image-host.jpg)
+    background-size: 888px 640px
+    background-position-x: 100%
+    background-repeat: no-repeat
+
+
+.logotype
+    position: absolute
+    top: 0
+
+
+
+.card__container
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 723px
+    height: 509px
+    background-color: $back-color
+
+    h1, p
+        margin-bottom: 30px
+
+    .card__title
+        font-size: 52px
+        color: $white
+        font-weight: 400
+        text-transform: uppercase
+    span
+        color: $neon-color
+    
+    .card__txt
+        color: $gray
+        font-weight: 400
+        line-height: 30px
+        width: 56%
+
+    form
+        position: relative
+
+        span
+            display: none
+            color: red
+
+    input
+        margin-left: -30px
+        
+
+
+    input[type="email"]
+        position: relative
+        padding-left: 30px
+        width: 420px
+        height: 56px
+        border-radius: 28px
+        border: none
+        outline: none
+        background-color: $input-color
+        color: $white
+    
+    input[type="submit"]
+        width: 162px
+        height: 46px
+        position: absolute
+        bottom: 5px
+        left: 253px
+        font-size: 14px
+        font-weight: 600
+        padding: 14px
+        border-radius: 28px
+        border: none
+        cursor: pointer
+        background-color: $neon-color
+        box-shadow: 0px 2px 4px rgba(84, 230, 175, 0.14)
+        transition: 0.5s ease
+    
+
+input[type="submit"]:hover
+        background-color: #B3FFE2
+
+.icon
+    display: flex
+    justify-content: space-between
+    width: 525px 
+    position: absolute
+    bottom: 0
+          
+
+// TABLET MEDIA QUERY
+@media (max-width: 1024px) 
+   
+   .main
+    min-height: 1024px
+    align-items: start
+
+    .pattern
+        left: 0
+        bottom: 0
+
+    .box__container
+        width: 95%
+        height: 767px
+        background-image: url(../assets/tablet/image-host.jpg)
+        background-size: 491px 100%
+
+        .card__container
+            width: 635px
+            height: 509px
+        
+    .logotype
+        margin-top: 30px
+
+//PHONE MEDIA QUERY
+@media (max-width: 426px) 
+    .main
+        position: relative
+        
+        .box__container
+            position: relative
+            display: flex
+            justify-content: center
+            align-items: center
+            background-image: none
+          
+        .card__container
+            display: flex
+            justify-content: center
+            text-align: center
+            width: 100%
+
+        .card__title
+            font-size: 26px
+        .card__txt
+            font-size: 15px
+            width: 100%
+
+        form
+            display: flex
+            flex-direction: column
+            align-items: center
+            width: 100%
+
+        input[type="email"],
+        input[type="submit"]
+            position: static
+            width: 327px
+            margin-bottom: 20px  
+    
+    .pattern
+        display: none
+    
+    .icon
+        display: flex
+        justify-content: space-evenly
+        position: static
+        width: 100%
+        height: 20px
+        margin-bottom: 30px
+    
+        .icons
+            width: 75px
+        
